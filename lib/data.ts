@@ -35,28 +35,28 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Sales Management",
+    location: "Atlanta, GA",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
+      "I managed an award winning team of 10 sales representatives at a Fortune 500 company.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2019 - 2023",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Graduated bootcamp",
+    location: "Los Angeles, CA",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+      "While transitioning careers, I graduated from BloomTech, a 6 month intensive coding bootcamp, in just 3 months.",
+    icon: React.createElement(LuGraduationCap),
+    date: "August 2023",
   },
   {
     title: "Full-Stack Developer",
-    location: "Houston, TX",
+    location: "Pasadena, CA",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, and Prisma.",
     icon: React.createElement(FaReact),
-    date: "2021 - present",
+    date: "2023 - Present",
   },
 ] as const;
 
@@ -85,12 +85,13 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
   "JavaScript",
+  "Prisma",
   "TypeScript",
   "React",
   "Next.js",
+  "HTML",
+  "CSS",
   "Node.js",
   "Tailwind",
   "Prisma",

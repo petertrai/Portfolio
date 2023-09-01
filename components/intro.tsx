@@ -1,5 +1,5 @@
 "use client";
-import { BsArrowRight, BsGithub, BsLinkedin } from "react-icons/bs";
+import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import Image from "next/image";
 import React from "react";
 import profilejpg from "../public/profile.jpeg";
@@ -7,10 +7,17 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function Intro() {
+  const { ref } = useSectionInView("Home", 0.5);
+
   return (
-    <section id="home" className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
+    <section
+    ref={ref}
+      id="home"
+      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+    >
       <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div
@@ -61,33 +68,46 @@ export default function Intro() {
         {`My focus is `}
         <span className="underline">React (Next.JS)</span>.
       </motion.h1>
-      
-      <motion.div className="flex flex-col sm:flex-row justify-center gap-2 px-4 text-lg font-medium"
-      initial={{opacity: 0, y: 100}}
-      animate={{opacity: 1, y: 0}}
-      transition={{
-        delay: 0.1
-      }}
+
+      <motion.div
+        className="flex flex-col sm:flex-row justify-center gap-2 px-4 text-lg font-medium"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.1,
+        }}
       >
         <Link
           href="#contact"
           className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:outline-none focus:scale-110 hover:bg-gray-950 hover:scale-110 active:scale-105 transition"
         >
           Contact me here
-          <BsArrowRight className="opacity-70 group-hover:translate-x-2 transition"/>
+          <BsArrowRight className="opacity-70 group-hover:translate-x-2 transition" />
         </Link>
 
-        <a className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10" href="/Resume.pdf" download>
-          Download Resume <HiDownload className="opacity-60 group-hover:translate-y-1 transition"/>
+        <a
+          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10"
+          href="/Resume.pdf"
+          download
+        >
+          Download Resume{" "}
+          <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
 
-        <a className="bg-white p-4 text-gray-700 flex items-center rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10" href="https://www.linkedin.com/in/peter-arguelles123" target="_blank">
-          <BsLinkedin/>
+        <a
+          className="bg-white p-4 text-gray-700 flex items-center rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10"
+          href="https://www.linkedin.com/in/peter-arguelles123"
+          target="_blank"
+        >
+          <BsLinkedin />
         </a>
 
-        <a className="bg-white p-4 text-gray-700 flex items-center rounded-full text-[1.35rem] focus:scale-[1.15] hover:scale-[1.15] active:scale-105 hover:text-gray-950 transition cursor-pointer border border-black/10"
-        href="https://github.com/petertrai" target="_blank"
-        ><FaGithubSquare  />
+        <a
+          className="bg-white p-4 text-gray-700 flex items-center rounded-full text-[1.35rem] focus:scale-[1.15] hover:scale-[1.15] active:scale-105 hover:text-gray-950 transition cursor-pointer border border-black/10"
+          href="https://github.com/petertrai"
+          target="_blank"
+        >
+          <FaGithubSquare />
         </a>
       </motion.div>
     </section>
