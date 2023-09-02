@@ -38,7 +38,7 @@ export const experiencesData = [
     title: "Sales Management",
     location: "Atlanta, GA",
     description:
-      "I managed an award winning team of 10 sales representatives at a Fortune 500 company.",
+      "I managed an award winning team of sales representatives at a Fortune 500 company.",
     icon: React.createElement(CgWorkAlt),
     date: "2019 - 2023",
   },
